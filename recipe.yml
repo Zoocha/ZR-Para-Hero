@@ -1,0 +1,10 @@
+name: 'ZC Hero Paragraph'
+description: 'Installs Zoocha Hero Paragraph Component'
+type: 'Feature'
+recipes:
+  - zr-media-bundle
+  - zr-layout-builder-bundle
+  - zr-paragraph-bundle
+
+config:
+  strict: false
