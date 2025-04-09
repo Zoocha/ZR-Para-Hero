@@ -6,6 +6,8 @@ dependencies:
     - field.field.paragraph.hero.field_media
     - field.field.paragraph.hero.field_sub_title
     - paragraphs.paragraphs_type.hero
+_core:
+  default_config_hash: TQKsiwSHUbyA8wmGS0xVAsyM0ICRv615qN2gmxFSED8
 id: paragraph.hero.default
 targetEntityType: paragraph
 bundle: hero
@@ -13,16 +15,16 @@ mode: default
 content:
   field_media:
     type: entity_reference_entity_view
-    label: hidden
+    label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_sub_title:
     type: string
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
