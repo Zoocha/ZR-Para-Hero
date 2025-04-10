@@ -3,9 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.hero.field_link
     - field.field.paragraph.hero.field_media
+    - field.field.paragraph.hero.field_strapline
     - field.field.paragraph.hero.field_sub_title
     - paragraphs.paragraphs_type.hero
+  module:
+    - linkit
 _core:
   default_config_hash: TQKsiwSHUbyA8wmGS0xVAsyM0ICRv615qN2gmxFSED8
 id: paragraph.hero.default
@@ -13,18 +17,38 @@ targetEntityType: paragraph
 bundle: hero
 mode: default
 content:
+  field_link:
+    type: linkit
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+      linkit_profile: default
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_media:
     type: entity_reference_entity_view
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
     weight: 1
     region: content
+  field_strapline:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_sub_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
