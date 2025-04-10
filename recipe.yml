@@ -4,6 +4,7 @@ type: 'Feature'
 recipes:
   - zr-media-bundle
   - zr-paragraph-bundle
-
+install: 
+  - linkit
 config:
   strict: false
